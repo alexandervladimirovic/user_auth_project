@@ -2,6 +2,7 @@ from datetime import timedelta
 from pathlib import Path
 
 from decouple import config
+from django.conf.global_settings import STATICFILES_DIRS
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -100,6 +101,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
