@@ -2,7 +2,6 @@ from datetime import timedelta
 from pathlib import Path
 
 from decouple import config
-from django.conf.global_settings import STATICFILES_DIRS
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,6 +29,7 @@ INSTALLED_APPS = [
 
     # MY APPS
     'accounts.apps.AccountsConfig',
+    'frontend.apps.FrontendConfig',
 ]
 
 

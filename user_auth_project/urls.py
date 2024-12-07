@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import render
+
 
 urlpatterns = [
+    path('', include('frontend.urls', namespace='frontend')),
+    path('api/', include('accounts.urls', namespace='accounts')),
     path('admin/', admin.site.urls),
-    path('api/accounts/', include('accounts.urls', namespace='accounts')),
-    path('registration/', lambda request: render(request, 'accounts/registration.html'), name='registration-page'),
-    path('login/', lambda request: render(request, 'accounts/login.html'), name='login-page'),
 ]

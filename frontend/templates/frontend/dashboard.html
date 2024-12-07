@@ -1,0 +1,14 @@
+{% extends "frontend/base.html" %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome to your Dashboard</h2>
+<p>This page is accessible only to authenticated users.</p>
+
+<div id="user-info"></div>
+<button id="logout-button">Logout</button>
+
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}
